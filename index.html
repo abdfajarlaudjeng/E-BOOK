@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook Pembelajaran Informatika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style sederhana untuk loading */
+        #loading { display: block; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="max-w-7xl mx-auto p-4">
+        <header class="text-center my-8">
+            <h1 class="text-4xl font-bold text-gray-800">📘 Ebook Pembelajaran Informatika</h1>
+            <p class="text-lg text-gray-600">Materi dan Link Pembelajaran Dinamis</p>
+        </header>
+
+        <div id="loading" class="text-center p-10">
+            <p class="text-xl font-semibold text-blue-600">🚀 Memuat materi dari Spreadsheet...</p>
+        </div>
+
+        <div id="ebook-container" class="hidden md:flex md:space-x-6">
+            
+            <aside class="w-full md:w-1/4">
+                <div class="bg-white rounded-xl shadow-lg p-4 sticky top-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Daftar Modul</h3>
+                    <nav id="sidebar-nav" class="space-y-2"></nav>
+                </div>
+            </aside>
+
+            <main id="main-content" class="w-full md:w-3/4">
+                </main>
+
+        </div>
+    </div>
+
+    <script>
+        // -----------------------------------------------------------------
+        // !! PENTING: GANTI DENGAN URL WEB APP ANDA !!
+        // -----------------------------------------------------------------
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqRIjVFLOHgrQ0loeUXOX9cDfct9UBoYnA8si5-XlBCQYWexXcSIvOSbkvNuMm8b4P/exec";
+        // -----------------------------------------------------------------
+
+        const loadingEl = document.getElementById('loading');
+        const containerEl = document.getElementById('ebook-container');
+        const sidebarNav = document.getElementById('sidebar-nav');
+        const mainContent = document.getElementById('main-content');
+
+        let ebookData = []; // Untuk menyimpan data dari sheet
+
+        // 1. Fungsi untuk memuat data materi dari Google Sheet
+        async function loadMaterials() {
+            try {
+                // Tambahkan "?page=ebook" untuk memberitahu Apps Script kita mau data Ebook
+                const response = await fetch(SCRIPT_URL + "?page=ebook", { method: 'GET' });
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    ebookData = result.data;
+                    renderSidebar(ebookData);
+                    renderContent(ebookData[0].id_modul); // Tampilkan modul pertama
+                    
+                    loadingEl.classList.add('hidden');
+                    containerEl.classList.remove('hidden');
+                } else {
+                    showError(result.message);
+                }
+            } catch (error) {
+                showError(error.message);
+            }
+        }
+
+        // 2. Fungsi untuk menampilkan Sidebar (Daftar Isi)
+        function renderSidebar(modules) {
+            sidebarNav.innerHTML = ''; // Kosongkan dulu
+            modules.forEach(modul => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.id = `nav-${modul.id_modul}`;
+                link.className = "block p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium";
+                link.innerHTML = `${modul.icon} ${modul.judul}`;
+                
+                // Tambahkan event klik
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    renderContent(modul.id_modul);
+                    // Hapus kelas 'active' dari semua link
+                    document.querySelectorAll('#sidebar-nav a').forEach(a => a.classList.remove('bg-blue-100', 'text-blue-700'));
+                    // Tambahkan kelas 'active' ke link yang diklik
+                    link.classList.add('bg-blue-100', 'text-blue-700');
+                };
+                
+                sidebarNav.appendChild(link);
+            });
+            // Aktifkan link pertama
+            sidebarNav.querySelector('a').classList.add('bg-blue-100', 'text-blue-700');
+        }
+
+        // 3. Fungsi untuk menampilkan Konten Utama
+        function renderContent(modulId) {
+            const modul = ebookData.find(m => m.id_modul === modulId);
+            if (!modul) return;
+
+            mainContent.innerHTML = ''; // Kosongkan dulu
+
+            // Buat header modul
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'bg-white rounded-xl shadow-lg p-6 mb-6';
+            headerDiv.innerHTML = `
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">${modul.icon} ${modul.judul}</h2>
+                <p class="text-lg text-gray-600">${modul.deskripsi_singkat}</p>
+            `;
+            mainContent.appendChild(headerDiv);
+
+            // Buat daftar materi
+            if (modul.materi && modul.materi.length > 0) {
+                modul.materi.forEach(materi => {
+                    const materiCard = document.createElement('a');
+                    materiCard.href = materi.url_link;
+                    materiCard.target = "_blank"; // Buka di tab baru
+                    materiCard.className = "block bg-white rounded-xl shadow-lg p-5 mb-4 hover:shadow-xl hover:scale-[1.02] transition-all";
+                    
+                    let icon = '🔗';
+                    if (materi.tipe_materi === 'Video') icon = '▶️';
+                    if (materi.tipe_materi === 'PDF') icon = '📄';
+                    if (materi.tipe_materi === 'Game') icon = '🎮';
+                    if (materi.tipe_materi === 'Artikel') icon = '📝';
+
+                    materiCard.innerHTML = `
+                        <div class="flex items-center space-x-4">
+                            <span class="text-3xl">${icon}</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600">${materi.judul_materi}</h4>
+                                <p class="text-gray-500">${materi.tipe_materi}</p>
+                            </div>
+                        </div>
+                    `;
+                    mainContent.appendChild(materiCard);
+                });
+            } else {
+                mainContent.innerHTML += `<p class="text-gray-500 text-center">Belum ada materi untuk modul ini.</p>`;
+            }
+        }
+
+        // 4. Fungsi untuk menampilkan Error
+        function showError(message) {
+            loadingEl.innerHTML = `<p class="text-red-500 font-bold p-10">Gagal memuat: ${message}</p>`;
+        }
+
+        // 5. Panggil fungsi utama saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', loadMaterials);
+    </script>
+</body>
+</html>
