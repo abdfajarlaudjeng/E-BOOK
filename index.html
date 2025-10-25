@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebook Pembelajaran Informatika</title>
+    <title>Ebook - SMPN 10 BANAWA SELATAN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Style sederhana untuk loading */
@@ -14,11 +14,22 @@
 <body class="bg-gray-100">
 
     <div class="max-w-7xl mx-auto p-4">
+        
         <header class="text-center my-8">
-            <h1 class="text-4xl font-bold text-gray-800">📘 Ebook Pembelajaran Informatika</h1>
-            <p class="text-lg text-gray-600">Materi dan Link Pembelajaran Dinamis</p>
+            <img src="smpn10.jpg" 
+                 alt="Logo Sekolah" 
+                 class="mx-auto mb-4 w-24 h-24 rounded-full shadow-md">
+            
+            <h1 class="text-3xl font-bold text-gray-800">SMPN 10 BANAWA SELATAN</h1>
+            
+            <p class="text-md text-gray-600 mt-1">
+                JLN. PNPM Dusun Bambami Desa Malino Kec.Banawa Selatan
+            </p>
+            
+            <h2 class="text-2xl font-semibold text-gray-700 mt-4">
+                📘 Ebook Pembelajaran Informatika
+            </h2>
         </header>
-
         <div id="loading" class="text-center p-10">
             <p class="text-xl font-semibold text-blue-600">🚀 Memuat materi dari Spreadsheet...</p>
         </div>
@@ -40,7 +51,7 @@
 
     <script>
         // -----------------------------------------------------------------
-        // !! PENTING: GANTI DENGAN URL WEB APP ANDA !!
+        // URL SCRIPT ANDA (Sudah benar, jangan diubah)
         // -----------------------------------------------------------------
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqRIjVFLOHgrQ0loeUXOX9cDfct9UBoYnA8si5-XlBCQYWexXcSIvOSbkvNuMm8b4P/exec";
         // -----------------------------------------------------------------
@@ -60,6 +71,10 @@
                 const result = await response.json();
 
                 if (result.status === 'success') {
+                    if (result.data.length === 0) {
+                        showError('Data Ebook tidak ditemukan. Periksa Tab "DaftarModul" di Google Sheet Anda.');
+                        return;
+                    }
                     ebookData = result.data;
                     renderSidebar(ebookData);
                     renderContent(ebookData[0].id_modul); // Tampilkan modul pertama
@@ -97,7 +112,9 @@
                 sidebarNav.appendChild(link);
             });
             // Aktifkan link pertama
-            sidebarNav.querySelector('a').classList.add('bg-blue-100', 'text-blue-700');
+            if (sidebarNav.querySelector('a')) {
+                sidebarNav.querySelector('a').classList.add('bg-blue-100', 'text-blue-700');
+            }
         }
 
         // 3. Fungsi untuk menampilkan Konten Utama
@@ -148,7 +165,7 @@
 
         // 4. Fungsi untuk menampilkan Error
         function showError(message) {
-            loadingEl.innerHTML = `<p class="text-red-500 font-bold p-10">Gagal memuat: ${message}</p>`;
+            loadingEl.innerHTML = `<p class="text-red-500 font-bold p-10">Gagal memuat: ${message}. Periksa nama Tab "DaftarModul" & "DaftarMateri" di Sheet Anda.</p>`;
         }
 
         // 5. Panggil fungsi utama saat halaman dimuat
