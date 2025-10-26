@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Jaringan Komputer & LKPD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style tambahan untuk cetak (print) */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none; /* Sembunyikan elemen yang tidak perlu dicetak */
+            }
+            .page-break {
+                page-break-before: always; /* Paksa halaman baru untuk LKPD */
+            }
+            .lkpd-input, .lkpd-textarea, .lkpd-radio {
+                border: 1px solid #000 !important;
+                background-color: #f0f0f0 !important;
+            }
+            img {
+                max-width: 250px !important; /* Kecilkan gambar saat dicetak */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg">
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-teal-800 mb-6">
+                🌐 Mengenal Jaringan: Menghubungkan Dunia Digital
+            </h1>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Kita sudah membahas **Hardware** (tubuh) dan **Software** (jiwa). Sekarang, kita akan membahas **Jaringan** (Networking). Jaringan adalah "sistem komunikasi" yang memungkinkan komputer-komputer berbicara satu sama lain.
+            </p>
+
+            <hr class="my-6">
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-teal-700 mb-3">Apa Itu Jaringan Komputer (Networking)?</h2>
+                <p class="mb-4">
+                    <strong>Pengertian:</strong> <em>Jaringan Komputer</em> adalah dua atau lebih komputer yang saling terhubung untuk berbagi data atau sumber daya (seperti printer atau koneksi internet).
+                </p>
+                <p class="leading-relaxed">
+                    <strong>Analogi Sistem Pos:</strong> Bayangkan setiap komputer adalah sebuah **rumah**. Jaringan adalah **sistem jalan, kantor pos, dan kurir** yang menghubungkan semua rumah. Tanpa jaringan, setiap rumah (komputer) akan terisolasi. Dengan jaringan, kamu bisa mengirim surat (data) ke rumah temanmu di kota lain (komputer lain).
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-cyan-700 mb-4 border-b pb-2">1. Jenis Jaringan (Berdasarkan Jangkauan)</h2>
+                <p class="text-md text-gray-600 mb-6">Jaringan dibedakan berdasarkan seberapa luas jangkauannya, sama seperti jalan desa dan jalan tol antar negara.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-cyan-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/22d3ee/ffffff?text=Diagram+LAN" alt="Diagram LAN" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">A. LAN (Local Area Network)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Jaringan area lokal. Ini adalah jaringan kecil yang mencakup area terbatas.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menghubungkan komputer-komputer dalam satu ruangan, satu gedung, atau satu sekolah. Jaringan Wi-Fi di rumah atau Lab Komputer sekolahmu adalah contoh LAN.</p>
+                        <p class="mt-2"><strong>Analogi:</strong> Jaringan jalan di dalam satu komplek perumahan.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-cyan-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/22d3ee/ffffff?text=Diagram+WAN" alt="Diagram WAN" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">B. WAN (Wide Area Network)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Jaringan area luas. Ini adalah jaringan raksasa yang mencakup kota, negara, atau bahkan seluruh dunia.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menghubungkan banyak LAN dari lokasi yang berjauhan. **Internet** adalah contoh WAN terbesar yang kita kenal.</p>
+                        <p class="mt-2"><strong>Analogi:</strong> Seluruh sistem jalan raya dan jalur pelayaran yang menghubungkan semua kota di dunia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4 border-b pb-2">2. Komponen Kunci Jaringan (Hardware & Software)</h2>
+                <p class="text-md text-gray-600 mb-6">Agar "sistem pos" ini berfungsi, kita butuh beberapa alat dan aturan khusus.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-blue-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3b82f6/ffffff?text=Wi-Fi+Router" alt="Router" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">A. Router (Perangkat Keras)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Perangkat keras yang bertindak sebagai "polisi lalu lintas" atau "kantor pos pusat" jaringan.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menghubungkan jaringan LAN-mu (misal: Wi-Fi rumah) ke jaringan WAN (Internet). Router menentukan jalur terbaik untuk mengirim "paket data" (surat) kamu agar sampai ke tujuan.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-blue-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3b82f6/ffffff?text=192.168.1.1" alt="IP Address" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">B. IP Address (Konsep/Software)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Alamat unik yang dimiliki setiap perangkat di jaringan, seperti nomor rumah.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Sebagai "alamat tujuan" dan "alamat pengirim" paket data. Tanpa IP Address, router tidak tahu harus mengirim data ke mana. Contoh: `192.168.1.1` atau `172.217.14.228` (alamat Google).</p>
+                    </div>
+                </div>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-blue-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3b82f6/ffffff?text=Client+Server" alt="Client Server" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">C. Client & Server (Konsep)</h3>
+                        <p class="mt-2"><strong>Client (Klien):</strong> Komputer yang *meminta* layanan atau data. Saat kamu membuka YouTube, komputermu adalah **Client**.</p>
+                        <p class="mt-2"><strong>Server (Peladen):</strong> Komputer (biasanya sangat besar) yang *menyediakan* layanan atau data. Komputer YouTube yang menyimpan video dan mengirimkannya padamu adalah **Server**.</p>
+                        <p class="mt-2"><strong>Analogi:</strong> Kamu (**Client**) memesan makanan di restoran (**Server**).</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-blue-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3b82f6/ffffff?text=Protokol+TCP/IP" alt="Protokol" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">D. Protokol (Konsep/Software)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Sekumpulan aturan atau "bahasa" standar yang digunakan komputer untuk berkomunikasi.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Memastikan data dikirim dengan benar, tidak rusak, dan sampai ke tujuan yang tepat. Protokol paling umum di internet adalah **TCP/IP** (Transmission Control Protocol/Internet Protocol).</p>
+                        <p class="mt-2"><strong>Analogi:</strong> Aturan cara menulis alamat di amplop dan cara kurir mengirimkannya.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <h1 class="text-3xl font-bold text-center text-teal-800 mb-8">
+                📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
+            </h1>
+            <h2 class="text-xl font-semibold text-center text-gray-700 mb-8 -mt-6">Dasar Jaringan Komputer</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-10 border-b pb-8">
+                <div>
+                    <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="nama" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="kelas" class="block text-sm font-medium text-gray-700">Kelas</label>
+                    <input type="text" id="kelas" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                </div>
+            </form>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 1: Menjodohkan</h3>
+                <p class="text-gray-600 mb-4">Tuliskan **Huruf** dari Kolom B di samping nomor Kolom A yang sesuai.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM A (Istilah Jaringan)</div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>1. LAN</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>2. IP Address</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>3. Router</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>4. Server</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>5. Client</label>
+                        </div>
+                    </div>
+                    <div class="space-y-2 bg-gray-50 p-4 rounded-lg border">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM B (Definisi)</div>
+                        <p><strong>A.</strong> "Polisi lalu lintas" yang menghubungkan jaringanmu ke internet.</p>
+                        <p><strong>B.</strong> Komputer yang *meminta* data (misal: komputermu saat buka YouTube).</p>
+                        <p><strong>C.</strong> Jaringan kecil di satu lokasi, seperti lab komputer sekolah.</p>
+                        <p><strong>D.</strong> Komputer yang *menyimpan* dan *memberi* data (misal: komputer Google).</p>
+                        <p><strong>E.</strong> "Alamat rumah" unik untuk setiap komputer di jaringan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 2: Benar atau Salah</h3>
+                <p class="text-gray-600 mb-4">Beri tanda centang (✓) pada kolom yang tepat!</p>
+                
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 p-3 text-left">Pernyataan</th>
+                            <th class="border border-gray-300 p-3 w-20">Benar</th>
+                            <th class="border border-gray-300 p-3 w-20">Salah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Internet adalah contoh dari LAN (Local Area Network).</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Router adalah perangkat keras (Hardware).</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Wi-Fi di rumahmu menghubungkan komputermu ke WAN (Wide Area Network).</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">IP Address adalah "bahasa" yang digunakan komputer, sedangkan Protokol adalah "alamat"-nya.</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 3: Analisis Sederhana</h3>
+                <p class="text-gray-600 mb-6">Bayangkan kamu sedang bermain game online (seperti Mobile Legends atau Roblox) bersama temanmu yang berada di kota lain. Jawablah pertanyaan di bawah ini!</p>
+                
+                <div class="p-4 border rounded-lg bg-gray-50 space-y-4">
+                    <div>
+                        <label for="analisis_1" class="block text-sm font-medium text-gray-700">1. Jenis jaringan raksasa yang kamu gunakan untuk terhubung dengan temanmu disebut...</label>
+                        <input type="text" id="analisis_1" placeholder="LAN atau WAN?" class="lkpd-input mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                    </div>
+                    
+                    <div>
+                        <label for="analisis_2" class="block text-sm font-medium text-gray-700">2. Perangkat keras di rumahmu yang menghubungkan HP/Komputermu ke internet disebut...</label>
+                        <input type="text" id="analisis_2" placeholder="Ketik nama hardware-nya" class="lkpd-input mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                    </div>
+
+                    <div>
+                        <label for="analisis_3" class="block text-sm font-medium text-gray-700">3. Saat bermain, HP/Komputermu bertindak sebagai... (meminta data), dan komputer game-nya bertindak sebagai... (memberi data).</label>
+                        <input type="text" id="analisis_3" placeholder="Client atau Server?" class="lkpd-input mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 no-print">
+                <button onclick="window.print()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    🖨️ Cetak / Simpan sebagai PDF
+                </button>
+            </div>
+
+        </section>
+
+    </div> </body>
+</html>
