@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komik Petualangan Informatika SMP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Font custom sederhana untuk judul komik */
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+        .font-comic {
+            font-family: 'Bangers', cursive;
+        }
+        /* Style untuk speech bubble sederhana */
+        .bubble {
+            position: relative;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .bubble-left::after {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 15px;
+            border-width: 10px 15px 10px 0;
+            border-style: solid;
+            border-color: transparent #e0f2fe transparent transparent; /* Sesuaikan dengan bg-sky-50 */
+        }
+        .bubble-right::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 15px;
+            border-width: 10px 0 10px 15px;
+            border-style: solid;
+            border-color: transparent transparent transparent #d1fae5; /* Sesuaikan dengan bg-green-50 */
+        }
+        
+        /* [BARU] Style untuk cetak kop surat */
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .kop-surat img {
+                max-width: 96px !important; /* Jaga ukuran logo tetap konsisten */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-200 antialiased">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-8">
+            <h1 class="text-5xl md:text-7xl text-blue-700 font-comic tracking-wider">
+                Petualangan Informatika
+            </h1>
+            <p class="text-2xl text-gray-700 font-semibold">3 Sahabat Menjelajah Dunia Digital</p>
+        </header>
+
+        <main class="bg-white rounded-lg shadow-xl border-4 border-gray-800 p-6">
+
+            <div class="kop-surat flex items-center gap-4 mb-6 border-b-4 border-gray-900 pb-4">
+                <img src="smpn10.jpg" alt="Logo Sekolah" class="w-24 h-24"> 
+                
+                <div class="text-center w-full">
+                    <p class="text-lg font-semibold text-gray-700">PEMERINTAH KABUPATEN DONGGALA</p> 
+                    <p class="text-lg font-semibold text-gray-700">DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <p class="text-2xl font-bold text-blue-700 mt-1">SMPN 10 BANAWA SELATAN</p>
+                    <p class="text-sm text-gray-600">Alamat: Jln.PNPM Dusun Bambami Desa Malino Kec.Banawa Selatan</p>
+                </div>
+            </div>
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold text-center text-red-700 mb-6 pb-2 border-b-2 border-red-300">
+                    Episode 1: Misteri Tubuh & Jiwa Komputer
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 1 - Di Lab Komputer</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Budi+bingung+melihat+CPU" alt="Budi bingung melihat CPU" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-xl">B</div>
+                            <div class="bubble bubble-left bg-sky-50 flex-1">
+                                <strong class="text-sky-800">Budi:</strong>
+                                <p>"Bu Guru, komputer ini kotak ajaib ya? Kok bisa dipakai main game, mengetik, internetan?"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 2 - Penjelasan Bu Guru</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                             <img src="https://placehold.co/400x300/e2e8f0/334155?text=Bu+Guru+menunjuk+PC+dan+Monitor" alt="Bu Guru menjelaskan" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center font-bold text-xl">G</div>
+                            <div class="bubble bubble-left bg-rose-50 flex-1">
+                                <strong class="text-rose-800">Bu Guru:</strong>
+                                <p>"Itu karena komputer punya 'Tubuh' dan 'Jiwa', Budi. Tubuhnya disebut <strong>Hardware</strong> (CPU, RAM, Monitor) dan Jiwanya disebut <strong>Software</strong> (Windows, Game)."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 3 - Computational Thinking</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                             <img src="https://placehold.co/400x300/e2e8f0/334155?text=Ani+membuat+diagram+alur+bikin+nasi+goreng" alt="Ani membuat flowchart" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-yellow-500 text-white flex items-center justify-center font-bold text-xl">A</div>
+                            <div class="bubble bubble-left bg-yellow-50 flex-1">
+                                <strong class="text-yellow-800">Ani:</strong>
+                                <p>"Oh! Jadi kalau kita mau 'menyuruh' komputer, kita harus berpikir runut. Seperti resep nasi goreng! Itu <strong>Algoritma</strong>, kan Bu?"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 4 - Kesimpulan Kelas 7</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                             <img src="https://placehold.co/400x300/e2e8f0/334155?text=Candra+mengacungkan+jempol" alt="Candra paham" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-xl">C</div>
+                            <div class="bubble bubble-left bg-green-50 flex-1">
+                                <strong class="text-green-800">Candra:</strong>
+                                <p>"Siap! Jadi kita belajar H/S/B, cara pakai aplikasi, dan cara berpikir seperti komputer. Siap naik ke Kelas 8!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold text-center text-green-700 mb-6 pb-2 border-b-2 border-green-300">
+                    Episode 2: Menjelajah Jalan Tol Internet
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 5 - Main Game Online</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Budi+(HP)+main+game+dengan+Candra+(PC)" alt="Main game online" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-xl">B</div>
+                            <div class="bubble bubble-left bg-sky-50 flex-1">
+                                <strong class="text-sky-800">Budi:</strong>
+                                <p>"Candra, kok HP-ku bisa terhubung sama komputermu? Padahal kita beda rumah! Pakai sihir apa ini?"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 6 - Konsep Jaringan</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Diagram+LAN+(Rumah)+terhubung+ke+WAN+(Internet)" alt="Diagram Jaringan" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-xl">C</div>
+                            <div class="bubble bubble-left bg-green-50 flex-1">
+                                <strong class="text-green-800">Candra:</strong>
+                                <p>"Bukan sihir! Ini <strong>Jaringan Komputer</strong>. Wi-Fi di rumah kita itu <strong>LAN</strong>, dan semua terhubung lewat jalan tol raksasa bernama <strong>Internet (WAN)</strong>!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 7 - Analisis Data</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Ani+membuat+grafik+di+Spreadsheet" alt="Ani pakai Spreadsheet" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-yellow-500 text-white flex items-center justify-center font-bold text-xl">A</div>
+                            <div class="bubble bubble-left bg-yellow-50 flex-1">
+                                <strong class="text-yellow-800">Ani:</strong>
+                                <p>"Selain internet, kita juga belajar mengolah data. Aku pakai <strong>Spreadsheet</strong> untuk menghitung rata-rata nilai kelas. Cepat sekali pakai rumus =SUM() dan =AVERAGE()!"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 8 - Etika Digital</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Bu+Guru+menerangkan+soal+Hoax+dan+Password" alt="Etika Digital" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center font-bold text-xl">G</div>
+                            <div class="bubble bubble-left bg-rose-50 flex-1">
+                                <strong class="text-rose-800">Bu Guru:</strong>
+                                <p>"Ingat, semakin canggih teknologinya, kita harus semakin bijak. Jaga privasi, jangan sebar password, dan saring sebelum *sharing* agar tidak termakan <strong>hoax</strong>!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <h2 class="text-3xl font-bold text-center text-indigo-700 mb-6 pb-2 border-b-2 border-indigo-300">
+                    Episode 3: Proyek Rahasia Si Robot Cerdas
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 9 - Tantangan Bu Guru</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Bu+Guru+memberi+tantangan+proyek" alt="Tantangan Proyek" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center font-bold text-xl">G</div>
+                            <div class="bubble bubble-left bg-rose-50 flex-1">
+                                <strong class="text-rose-800">Bu Guru:</strong>
+                                <p>"Tugas akhir kelas 9: Buatlah sebuah karya digital yang bermanfaat! Kalian bisa pakai <strong>visual programming</strong> seperti Scratch, atau mulai belajar <strong>HTML</strong> dasar!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 10 - Proses Coding</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Ani+dan+Budi+coding+Scratch+(blok+logika)" alt="Coding Scratch" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-yellow-500 text-white flex items-center justify-center font-bold text-xl">A</div>
+                            <div class="bubble bubble-left bg-yellow-50 flex-1">
+                                <strong class="text-yellow-800">Ani:</strong>
+                                <p>"Budi, aku buat <strong>Algoritma</strong>-nya. Jika (IF) sensor mendeteksi sampah, (THEN) lengan robot bergerak. Ini logikanya!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 11 - Dampak Sosial</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Candra+menjelaskan+E-Commerce+dan+IoT" alt="Dampak Sosial" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-xl">C</div>
+                            <div class="bubble bubble-left bg-green-50 flex-1">
+                                <strong class="text-green-800">Candra:</strong>
+                                <p>"Proyek kita ini keren! Informatika itu dampaknya besar. Seperti <strong>E-Commerce</strong> yang membantu UMKM jualan online, atau <strong>IoT</strong> untuk smart home."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-4 border-gray-600 rounded-lg p-3 bg-gray-50 flex flex-col">
+                        <div class="text-sm font-bold text-gray-500 mb-2">PANEL 12 - LULUS!</div>
+                        <div class="flex-grow w-full h-48 bg-gray-300 rounded-md flex items-center justify-center mb-3">
+                            <img src="https://placehold.co/400x300/e2e8f0/334155?text=Semua+murid+dan+guru+tersenyum" alt="Lulus" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-xl">B</div>
+                            <div class="bubble bubble-left bg-sky-50 flex-1">
+                                <strong class="text-sky-800">Budi:</strong>
+                                <p>"Asyik! Dari cuma main game, sekarang kita bisa bikin game! Informatika itu seru!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div class="mt-10 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 rounded-r-lg">
+                <strong class="font-bold text-lg">TAMAT</strong>
+                <p class="mt-1 italic">Perjalanan Ani, Budi, dan Candra di SMP selesai. Mereka kini paham bahwa Informatika bukan hanya soal komputer, tapi soal cara berpikir, berkolaborasi, dan menciptakan solusi untuk masa depan. Petualangan mereka di SMA baru akan dimulai!</p>
+            </div>
+
+        </main>
+        
+        <footer class="text-center mt-6 text-gray-600 text-sm no-print">
+            Komik Edukasi Informatika SMP (Kelas 7-9) - SMPN 10 BANAWA SELATAN
+        </footer>
+    </div>
+</body>
+</html>
