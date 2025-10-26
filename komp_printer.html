@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Teknis: Merakit PC & Perbaikan Printer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style tambahan untuk cetak (print) */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none; /* Sembunyikan elemen yang tidak perlu dicetak */
+            }
+            .page-break {
+                page-break-before: always; /* Paksa halaman baru untuk LKPD */
+            }
+            .lkpd-input, .lkpd-textarea, .lkpd-radio {
+                border: 1px solid #000 !important;
+                background-color: #f0f0f0 !important;
+            }
+            img {
+                max-width: 250px !important; /* Kecilkan gambar saat dicetak */
+            }
+            /* [BARU] Aturan cetak untuk kop surat */
+            .kop-surat img {
+                max-width: 96px !important; /* Jaga ukuran logo tetap konsisten */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg">
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-6">
+                🛠️ Panduan Dasar Merakit Komputer (PC Assembly)
+            </h1>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Pernahkah kamu ingin membangun komputermu sendiri? Merakit PC (Personal Computer) itu seperti bermain LEGO versi canggih. Ini adalah proses menyatukan semua komponen *hardware* ke dalam satu *casing* agar bisa bekerja sebagai satu unit komputer.
+            </p>
+
+            <hr class="my-6">
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-3">Sebelum Memulai: Persiapan</h2>
+                <div class="md:flex gap-6 p-4 bg-indigo-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/818cf8/ffffff?text=Obeng+dan+ESD+Strap" alt="Alat Rakit PC" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Alat dan Keselamatan</h3>
+                        <p class="mt-2">Hal terpenting yang kamu butuhkan hanyalah **Obeng Plus (+)**.</p>
+                        <p class="mt-2"><strong>Keselamatan (ESD):</strong> Komponen komputer sensitif terhadap listrik statis dari tubuh kita. Pastikan kamu bekerja di lantai (bukan karpet) dan sering-seringlah menyentuh logam lain (seperti *casing*) untuk menetralkan listrik statis sebelum menyentuh *chip*.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">Langkah-Langkah Utama Merakit PC</h2>
+                <p class="text-md text-gray-600 mb-6">Urutan ini sangat penting untuk mempermudah proses perakitan.</p>
+
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">1. Memasang "Otak" (CPU)</h3>
+                    <p class="mt-2">Buka tuas pengunci soket CPU di *motherboard*, letakkan CPU dengan hati-hati (cocokkan tanda panah di CPU dan soket), lalu kunci kembali tuasnya. Ini adalah bagian paling sensitif!</p>
+                </div>
+                
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">2. Memasang "Meja Kerja" (RAM)</h3>
+                    <p class="mt-2">Buka klip pengunci slot RAM di *motherboard*. Pasang kepingan RAM (cocokkan lekukannya) dan tekan di kedua sisinya hingga klip pengunci berbunyi "klik" dan menutup otomatis.</p>
+                </div>
+
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">3. Memasang Motherboard ke Casing</h3>
+                    <p class="mt-2">Pasang *I/O shield* (pelat pelindung port) ke *casing*. Letakkan *motherboard* di atas *standoff* (dudukan baut) di dalam *casing*, lalu kencangkan dengan baut menggunakan obeng.</p>
+                </div>
+
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">4. Memasang "Jantung" (Power Supply Unit / PSU)</h3>
+                    <p class="mt-2">Letakkan PSU di tempatnya (biasanya di bagian bawah belakang *casing*) dan kencangkan bautnya dari luar *casing*.</p>
+                </div>
+
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">5. Memasang Penyimpanan (SSD/HDD)</h3>
+                    <p class="mt-2">Pasang SSD atau HDD di *drive bay* (rak) yang tersedia di dalam *casing* dan kencangkan bautnya.</p>
+                </div>
+
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">6. Menghubungkan Semua Kabel</h3>
+                    <p class="mt-2">Ini adalah bagian yang rumit. Kamu harus menghubungkan kabel-kabel dari PSU ke komponen yang tepat (kabel 24-pin ke *motherboard*, kabel 8-pin ke CPU, kabel SATA ke SSD/HDD). Kamu juga harus menghubungkan kabel kecil dari *casing* (tombol power, USB) ke *motherboard*.</p>
+                </div>
+                
+                <div class="mb-4 p-4 border-l-4 border-indigo-300 bg-gray-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">7. Memasang Kartu Grafis (VGA) (Opsional)</h3>
+                    <p class="mt-2">Jika kamu punya VGA *card* tambahan, pasang di slot PCIe (slot panjang) di *motherboard* dan kencangkan bautnya ke *casing*. Jangan lupa hubungkan kabel daya dari PSU jika VGA-mu membutuhkannya.</p>
+                </div>
+                
+                <div class="mb-4 p-4 border-l-4 border-green-300 bg-green-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">8. Tes Menyala (First Boot)</h3>
+                    <p class="mt-2">Hubungkan kabel power, monitor, keyboard, dan mouse. Tekan tombol power di *casing*. Jika semua langkah benar, komputer akan menyala dan menampilkan BIOS di monitor. Selamat!</p>
+                </div>
+            </section>
+        </article>
+
+        <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <div class="kop-surat flex items-center gap-4 mb-6 border-b-4 border-gray-900 pb-4">
+                <img src="smpn10.jpg" alt="Logo Sekolah" class="w-24 h-24"> 
+                <div class="text-center w-full">
+                    <p class="text-lg font-semibold text-gray-700">PEMERINTAH KABUPATEN DONGGALA</p> 
+                    <p class="text-lg font-semibold text-gray-700">DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <p class="text-2xl font-bold text-indigo-800 mt-1">SMPN 10 BANAWA SELATAN</p>
+                    <p class="text-sm text-gray-600">Alamat: Jln.PNPM Dusun Bambami Desa Malino Kec.Banawa Selatan</p>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold text-center text-indigo-800 mb-8">
+                📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
+            </h1>
+            <h2 class="text-xl font-semibold text-center text-gray-700 mb-8 -mt-6">Merakit Komputer (PC Assembly)</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-10 border-b pb-8">
+                <div>
+                    <label for="nama_pc" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="nama_pc" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label for="kelas_pc" class="block text-sm font-medium text-gray-700">Kelas</label>
+                    <input type="text" id="kelas_pc" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+            </form>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 1: Mengurutkan Langkah</h3>
+                <p class="text-gray-600 mb-4">Langkah-langkah di bawah ini masih acak. Beri nomor **1** sampai **6** pada kotak yang disediakan untuk mengurutkan proses perakitan PC yang benar!</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label class="text-lg">Memasang Power Supply Unit (PSU) ke dalam casing.</label>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label class="text-lg">Menghubungkan semua kabel daya (PSU, SATA) dan kabel panel depan.</label>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label class="text-lg">Memasang CPU dan RAM ke Motherboard.</label>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label classs="text-lg">Memasang Motherboard yang sudah terisi CPU/RAM ke dalam casing.</label>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label class="text-lg">Memasang SSD / HDD di rak penyimpanan (drive bay).</label>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="text" class="lkpd-input w-12 h-12 text-center text-xl font-bold border-gray-300 rounded">
+                        <label class="text-lg">Menyalakan komputer untuk tes (First Boot).</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 2: Analisis Keselamatan</h3>
+                <p class="text-gray-600 mb-6">Jawablah pertanyaan di bawah ini dengan singkat dan jelas!</p>
+                
+                <div class="p-4 border rounded-lg bg-gray-50">
+                    <p class="font-semibold mb-3">
+                        Saat merakit PC, kita sering diingatkan untuk tidak menyentuh bagian lempengan emas (pin) pada RAM atau bagian bawah CPU. Mengapa hal ini penting?
+                    </p>
+                    
+                    <label for="alasan_esd" class="block text-sm font-medium text-gray-700">Alasan:</label>
+                    <textarea id="alasan_esd" rows="4" class="lkpd-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Ketik jawabanmu di sini... (Hint: berhubungan dengan listrik statis/ESD)"></textarea>
+                </div>
+            </div>
+
+        </section>
+        
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-6">
+                🖨️ Dasar Perbaikan Printer: Masalah & Solusi Umum
+            </h1>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Printer adalah perangkat *output* yang sangat berguna untuk mencetak tugas. Tapi, printer juga terkenal sering rewel! Kabar baiknya, sebagian besar masalah printer itu umum dan bisa kita perbaiki sendiri di rumah.
+            </p>
+
+            <hr class="my-6">
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-slate-700 mb-3">Dua Jenis Printer Paling Umum</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-4 bg-slate-50 rounded-lg border">
+                        <img src="https://placehold.co/300x200/64748b/ffffff?text=Printer+Inkjet" alt="Printer Inkjet" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-900">1. Printer Inkjet</h3>
+                        <p class="mt-2">Menggunakan **tinta cair** (Ink) yang disemprotkan ke kertas. Cocok untuk mencetak dokumen berwarna dan foto.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-lg border">
+                        <img src="https://placehold.co/300x200/64748b/ffffff?text=Printer+LaserJet" alt="Printer LaserJet" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-900">2. Printer LaserJet</h3>
+                        <p class="mt-2">Menggunakan **bubuk toner** (Toner) yang dipanaskan ke kertas. Sangat cepat untuk mencetak dokumen teks hitam-putih.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Masalah Umum dan Solusinya (Troubleshooting)</h2>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-100 rounded-lg">
+                    <img src="https://placehold.co/300x200/94a3b8/ffffff?text=Kabel+Power" alt="Kabel Power" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-red-600">Masalah 1: Printer Mati Total (Tidak Menyala)</h3>
+                        <p class="mt-2"><strong>Gejala:</strong> Lampu indikator tidak menyala saat tombol power ditekan.</p>
+                        <p class="mt-2"><strong>Solusi Pertama:</summary>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li>Periksa apakah **kabel power** tertancap dengan benar ke printer dan stopkontak.</li>
+                            <li>Coba ganti stopkontak (mungkin stopkontaknya yang rusak).</li>
+                            <li>Pastikan tombol power di printer sudah ditekan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-100 rounded-lg">
+                    <img src="https://placehold.co/300x200/94a3b8/ffffff?text=Kertas+Macet" alt="Paper Jam" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-red-600">Masalah 2: Kertas Macet (Paper Jam)</h3>
+                        <p class="mt-2"><strong>Gejala:</strong> Kertas tersangkut di dalam printer dan proses cetak berhenti.</p>
+                        <p class="mt-2"><strong>Solusi Pertama:</summary>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li>Buka penutup printer.</li>
+                            <li>Tarik kertas yang tersangkut **secara perlahan** sesuai arah keluarnya kertas (jangan ditarik paksa berlawanan arah).</li>
+                            <li>Pastikan tidak ada sobekan kertas kecil yang tertinggal di dalam.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-100 rounded-lg">
+                    <img src="https://placehold.co/300x200/94a3b8/ffffff?text=Hasil+Cetak+Jelek" alt="Hasil Jelek" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-red-600">Masalah 3: Hasil Cetak Bergaris / Putus-putus (Inkjet)</h3>
+                        <p class="mt-2"><strong>Gejala:</strong> Hasil cetakan tidak jelas, ada garis putih, atau warnanya pudar.</p>
+                        <p class="mt-2"><strong>Solusi Pertama:</summary>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li>Periksa level tinta, mungkin tinta sudah habis dan perlu diisi ulang.</li>
+                            <li>Lakukan **"Head Cleaning"** melalui software (menu *Maintenance* atau *Perawatan* di pengaturan printer di komputermu).</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-100 rounded-lg">
+                    <img src="https://placehold.co/300x200/94a3b8/ffffff?text=Printer+Offline" alt="Printer Offline" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-red-600">Masalah 4: Printer Offline / Tidak Terdeteksi</h3>
+                        <p class="mt-2"><strong>Gejala:</strong> Komputer tidak bisa menemukan printer, atau statusnya "Offline" padahal printer menyala.</p>
+                        <p class="mt-2"><strong>Solusi Pertama:</summary>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li>**Restart** komputer dan printer Anda.</li>
+                            <li>Periksa **kabel USB** yang menghubungkan printer ke komputer (coba cabut dan pasang lagi).</li>
+                            <li>Jika menggunakan Wi-Fi, pastikan printer dan komputer terhubung ke jaringan Wi-Fi yang sama.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <div class="kop-surat flex items-center gap-4 mb-6 border-b-4 border-gray-900 pb-4">
+                <img src="smpn10.jpg" alt="Logo Sekolah" class="w-24 h-24"> 
+                <div class="text-center w-full">
+                    <p class="text-lg font-semibold text-gray-700">PEMERINTAH KABUPATEN DONGGALA</p> 
+                    <p class="text-lg font-semibold text-gray-700">DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <p class="text-2xl font-bold text-slate-800 mt-1">SMPN 10 BANAWA SELATAN</p>
+                    <p class="text-sm text-gray-600">Alamat: Jln.PNPM Dusun Bambami Desa Malino Kec.Banawa Selatan</p>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold text-center text-slate-800 mb-8">
+                📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
+            </h1>
+            <h2 class="text-xl font-semibold text-center text-gray-700 mb-8 -mt-6">Dasar Perbaikan Printer</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-10 border-b pb-8">
+                <div>
+                    <label for="nama_print" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="nama_print" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500">
+                </div>
+                <div>
+                    <label for="kelas_print" class="block text-sm font-medium text-gray-700">Kelas</label>
+                    <input type="text" id="kelas_print" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500">
+                </div>
+            </form>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 1: Benar atau Salah</h3>
+                <p class="text-gray-600 mb-4">Beri tanda centang (✓) pada kolom yang tepat!</p>
+                
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 p-3 text-left">Pernyataan</th>
+                            <th class="border border-gray-300 p-3 w-20">Benar</th>
+                            <th class="border border-gray-300 p-3 w-20">Salah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Printer Inkjet menggunakan bubuk panas yang disebut toner.</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Jika hasil cetak putus-putus, langkah pertama adalah melakukan "Head Cleaning".</td>
+                            <td classD="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">"Paper Jam" adalah istilah untuk printer yang tidak terdeteksi komputer.</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3">Mencabut dan memasang kembali kabel USB adalah solusi jika printer "Offline".</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 2: Diagnosis Skenario</h3>
+                <p class="text-gray-600 mb-6">Kamu adalah seorang teknisi. Apa solusi pertama yang akan kamu sarankan untuk masalah-masalah di bawah ini?</p>
+                
+                <div class="space-y-6">
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <p class="font-semibold mb-3">
+                            Skenario 1: Budi menekan tombol power printernya, tetapi tidak ada lampu yang menyala dan printer tetap mati.
+                        </p>
+                        <label for="skenario_1" class="block text-sm font-medium text-gray-700">Langkah perbaikan pertama yang harus Budi lakukan adalah:</label>
+                        <input type="text" id="skenario_1" placeholder="Ketik jawabanmu..." class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500">
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <p class="font-semibold mb-3">
+                            Skenario 2: Ani mencetak tugas, tetapi kertasnya berhenti di tengah jalan dan tidak mau keluar dari printer.
+                        </p>
+                        <label for="skenario_2" class="block text-sm font-medium text-gray-700">Masalah ini disebut...</label>
+                        <input type="text" id="skenario_2" placeholder="Ketik nama masalahnya..." class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500">
+                    </div>
+
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <p class="font-semibold mb-3">
+                            Skenario 3: Hasil cetak printer Inkjet milik Candra warnanya pudar dan banyak garis-garis putih, padahal tintanya baru diisi.
+                        </p>
+                        <label for="skenario_3" class="block text-sm font-medium text-gray-700">Fitur di komputer yang harus Candra jalankan adalah...</label>
+                        <input type="text" id="skenario_3" placeholder="Ketik nama fiturnya..." class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 no-print">
+                <button onclick="window.print()" class="bg-slate-600 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    🖨️ Cetak / Simpan sebagai PDF
+                </button>
+            </div>
+
+        </section>
+
+    </div> </body>
+</html>
