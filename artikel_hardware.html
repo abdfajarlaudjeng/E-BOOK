@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Hardware & LKPD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style tambahan untuk cetak (print) */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none; /* Sembunyikan elemen yang tidak perlu dicetak */
+            }
+            .page-break {
+                page-break-before: always; /* Paksa halaman baru untuk LKPD */
+            }
+            .lkpd-input, .lkpd-textarea {
+                border: 1px solid #000 !important;
+                background-color: #f0f0f0 !important;
+            }
+            img {
+                max-width: 250px !important; /* Kecilkan gambar saat dicetak */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg">
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-6">
+                🖥️ Mengenal Hardware: Komponen Fisik di Balik Keajaiban Komputer
+            </h1>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Pernahkah kamu bertanya-tanya apa yang sebenarnya ada di dalam kotak komputer atau laptopmu? Benda-benda ajaib apa yang membuatmu bisa bermain game, mengetik tugas, dan menjelajahi internet? Jawabannya adalah <strong>Hardware</strong>!
+            </p>
+
+            <hr class="my-6">
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-3">Apa Itu Hardware (Perangkat Keras)?</h2>
+                <p class="mb-4">
+                    <strong>Pengertian:</strong> <em>Hardware</em> (Perangkat Keras) adalah semua komponen fisik komputer yang bisa kita lihat, sentuh, dan pegang.
+                </p>
+                <p class="leading-relaxed">
+                    <strong>Penjelasan:</strong> Bayangkan komputer sebagai sebuah restoran. <em>Hardware</em> adalah seluruh bangunan fisiknya: dapur, koki, meja, kursi, dan piring. Tanpa <em>hardware</em>, komputer hanyalah sebuah ide kosong. Agar bisa bekerja, <em>hardware</em> dibagi menjadi empat kelompok utama: Perangkat Input, Perangkat Pemroses, Perangkat Penyimpanan, dan Perangkat Output.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4 border-b pb-2">1. Perangkat Input (Input Devices)</h2>
+                <p class="text-md text-gray-600 mb-6">"Panca indra" komputer. Tugasnya adalah menerima perintah atau data dari kamu (pengguna) dan mengirimkannya ke otak komputer untuk diproses.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3498db/ffffff?text=Keyboard" alt="Keyboard" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Keyboard (Papan Ketik)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Papan yang berisi tombol-tombol huruf, angka, dan simbol.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk memasukkan teks dan perintah ke dalam komputer. Saat kamu mengetik tugas, kamu sedang menggunakan <em>hardware</em> input ini.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3498db/ffffff?text=Mouse" alt="Mouse" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Mouse (Tetikus)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Perangkat genggam kecil yang digunakan untuk menggerakkan kursor (penunjuk) di layar.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk memilih, mengklik, dan memindahkan objek di layar. <em>Mouse</em> membuat interaksi dengan komputer menjadi lebih mudah (navigasi).</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-gray-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/3498db/ffffff?text=Microphone" alt="Microphone" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Microphone (Mikrofon)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Alat yang mengubah gelombang suara (suara kita) menjadi sinyal digital yang dimengerti komputer.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk merekam suara, melakukan panggilan video, atau memberi perintah suara.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-green-700 mb-4 border-b pb-2">2. Perangkat Pemroses (Process Devices)</h2>
+                <p class="text-md text-gray-600 mb-6">"Otak" dari komputer. Semua perintah yang kamu berikan melalui perangkat input akan diproses di sini.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-green-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/2ecc71/ffffff?text=CPU" alt="CPU" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">CPU (Central Processing Unit) / Prosesor</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Sebuah <em>chip</em> kecil yang menjadi otak utama komputer.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Melakukan semua perhitungan dan logika. Semakin cepat CPU-mu, semakin cepat komputermu berpikir dan menjalankan aplikasi.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-green-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/2ecc71/ffffff?text=RAM" alt="RAM" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">RAM (Random Access Memory)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Memori penyimpanan sementara yang sangat cepat.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Bekerja sebagai "meja kerja" CPU. Saat kamu membuka aplikasi, datanya disimpan di RAM agar bisa diakses cepat. Jika komputer mati, data di RAM akan hilang.</p>
+                    </div>
+                </div>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-green-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/2ecc71/ffffff?text=Motherboard" alt="Motherboard" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Motherboard (Papan Induk)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Papan sirkuit raksasa yang menjadi "rumah" bagi semua komponen utama.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menghubungkan semua <em>hardware</em> (CPU, RAM, dll.) agar bisa berkomunikasi satu sama lain.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-yellow-700 mb-4 border-b pb-2">3. Perangkat Penyimpanan (Storage Devices)</h2>
+                <p class="text-md text-gray-600 mb-6">"Lemari arsip" permanen tempat kamu menyimpan semua data, file, dan aplikasi.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-yellow-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f1c40f/ffffff?text=SSD" alt="SSD" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">SSD (Solid State Drive)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Jenis penyimpanan modern yang menggunakan <em>chip</em> memori dan tidak memiliki bagian bergerak.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menyimpan sistem operasi dan file. SSD sangat cepat, membuat komputermu menyala (booting) dalam hitungan detik.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-yellow-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f1c40f/ffffff?text=HDD" alt="HDD" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">HDD (Hard Disk Drive)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Jenis penyimpanan tradisional yang menggunakan piringan magnetik berputar.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menyimpan data secara permanen. HDD biasanya lebih lambat dari SSD, tapi kapasitasnya lebih besar dengan harga lebih murah.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-red-700 mb-4 border-b pb-2">4. Perangkat Output (Output Devices)</h2>
+                <p class="text-md text-gray-600 mb-6">Menampilkan hasil pemrosesan data kepadamu dalam bentuk yang kamu mengerti (gambar, suara, cetak).</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-red-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/e74c3c/ffffff?text=Monitor" alt="Monitor" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Monitor (Layar)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Layar yang menampilkan informasi visual.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Menampilkan semua yang sedang kamu kerjakan, mulai dari video, game, hingga dokumen teks.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-red-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/e74c3c/ffffff?text=Speaker" alt="Speaker" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Speaker (Pengeras Suara)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Alat yang mengubah sinyal digital kembali menjadi gelombang suara.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Mengeluarkan suara dari komputer, seperti musik, suara dalam game, atau audio saat panggilan video.</p>
+                    </div>
+                </div>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-red-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/e74c3c/ffffff?text=Printer" alt="Printer" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">Printer (Pencetak)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> Perangkat yang mencetak data digital (teks, gambar) ke media fisik (kertas).</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Membuat salinan fisik (hard copy) dari tugas, foto, atau dokumen digitalmu.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <h1 class="text-3xl font-bold text-center text-blue-800 mb-8">
+                📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
+            </h1>
+            <h2 class="text-xl font-semibold text-center text-gray-700 mb-8 -mt-6">Mengenal Hardware Komputer</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-10 border-b pb-8">
+                <div>
+                    <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="nama" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="kelas" class="block text-sm font-medium text-gray-700">Kelas</label>
+                    <input type="text" id="kelas" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+            </form>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 1: Menjodohkan</h3>
+                <p class="text-gray-600 mb-4">Tuliskan **Huruf** dari Kolom B di samping nomor Kolom A yang sesuai.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM A (Nama Komponen)</div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>1. CPU (Processor)</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>2. RAM</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>3. Monitor</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>4. Keyboard</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>5. SSD</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>6. Printer</label>
+                        </div>
+                    </div>
+                    <div class="space-y-2 bg-gray-50 p-4 rounded-lg border">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM B (Fungsi Utama)</div>
+                        <p><strong>A.</strong> Menampilkan gambar di layar.</p>
+                        <p><strong>B.</strong> Menyimpan data secara permanen (sangat cepat).</p>
+                        <p><strong>C.</strong> "Otak" utama komputer yang berpikir.</p>
+                        <p><strong>D.</strong> Menjadi "meja kerja" sementara saat aplikasi berjalan.</p>
+                        <p><strong>E.</strong> Mencetak dokumen ke kertas.</p>
+                        <p><strong>F.</strong> Memasukkan perintah berupa teks dan angka.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 2: Identifikasi Komponen</h3>
+                <p class="text-gray-600 mb-6">Perhatikan gambar dan deskripsi di bawah ini. Tuliskan nama <em>hardware</em> yang tepat!</p>
+                
+                <div class="space-y-6">
+                    <div class="p-4 border rounded-lg md:flex items-center gap-6">
+                        <img src="https://placehold.co/200x150/3498db/ffffff?text=Mouse" alt="Mouse" class="rounded-lg mb-4 md:mb-0 w-full md:w-48">
+                        <div class="flex-1">
+                            <p class="mb-2">Aku adalah alat untuk menggerakkan kursor di layar. Aku adalah:</p>
+                            <input type="text" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div class="p-4 border rounded-lg md:flex items-center gap-6">
+                        <img src="https://placehold.co/200x150/e74c3c/ffffff?text=Speaker" alt="Speaker" class="rounded-lg mb-4 md:mb-0 w-full md:w-48">
+                        <div class="flex-1">
+                            <p class="mb-2">Aku berfungsi untuk mengeluarkan suara musik dan video dari komputer. Aku adalah:</p>
+                            <input type="text" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div class="p-4 border rounded-lg md:flex items-center gap-6">
+                        <img src="https://placehold.co/200x150/2ecc71/ffffff?text=Motherboard" alt="Motherboard" class="rounded-lg mb-4 md:mb-0 w-full md:w-48">
+                        <div class="flex-1">
+                            <p class="mb-2">Aku adalah papan utama yang menghubungkan semua komponen seperti CPU dan RAM. Aku adalah:</p>
+                            <input type="text" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 3: Analisis Sederhana</h3>
+                <p class="text-gray-600 mb-6">Jawablah pertanyaan di bawah ini dengan singkat dan jelas!</p>
+                
+                <div class="p-4 border rounded-lg bg-gray-50">
+                    <p class="font-semibold mb-3">
+                        Saat kamu sedang bermain game, tiba-tiba listrik di rumahmu padam. Kamu menyalakan komputer lagi dan game-mu harus dimulai dari awal (bukan dari <em>save point</em> terakhir).
+                    </p>
+                    <ul class="list-disc list-inside mb-4 space-y-2">
+                        <li>Data game yang sedang berjalan (sebelum listrik padam) tadi disimpan di <strong>RAM</strong> atau di <strong>HDD/SSD</strong>?</li>
+                        <li>Berikan alasan singkat untuk jawabanmu!</li>
+                    </ul>
+                    
+                    <label for="jawaban_ram" class="block text-sm font-medium text-gray-700">Disimpan di:</label>
+                    <input type="text" id="jawaban_ram" class="lkpd-input mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    
+                    <label for="alasan" class="block text-sm font-medium text-gray-700 mt-4">Alasan:</label>
+                    <textarea id="alasan" rows="4" class="lkpd-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 no-print">
+                <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    🖨️ Cetak / Simpan sebagai PDF
+                </button>
+            </div>
+
+        </section>
+
+    </div> </body>
+</html>
