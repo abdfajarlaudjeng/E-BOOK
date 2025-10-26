@@ -24,6 +24,10 @@
             img {
                 max-width: 250px !important; /* Kecilkan gambar saat dicetak */
             }
+            /* [BARU] Aturan cetak untuk kop surat */
+            .kop-surat img {
+                max-width: 96px !important; /* Jaga ukuran logo tetap konsisten */
+            }
         }
     </style>
 </head>
@@ -122,6 +126,16 @@
 
         <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
             
+            <div class="kop-surat flex items-center gap-4 mb-6 border-b-4 border-gray-900 pb-4">
+                <img src="smpn10.jpg" alt="Logo Sekolah" class="w-24 h-24"> 
+                
+                <div class="text-center w-full">
+                    <p class="text-lg font-semibold text-gray-700">PEMERINTAH KABUPATEN DONGGALA</p> 
+                    <p class="text-lg font-semibold text-gray-700">DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                    <p class="text-2xl font-bold text-purple-800 mt-1">SMPN 10 BANAWA SELATAN</p>
+                    <p class="text-sm text-gray-600">Alamat: Jln.PNPM Dusun Bambami Desa Malino Kec.Banawa Selatan</p>
+                </div>
+            </div>
             <h1 class="text-3xl font-bold text-center text-purple-800 mb-8">
                 📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
             </h1>
@@ -168,7 +182,7 @@
                         </tr>
                         <tr>
                             <td class="border border-gray-300 p-3 font-medium">Microsoft Word</td>
-                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td classs="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
                             <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
                         </tr>
                         <tr>
@@ -237,7 +251,8 @@
             <div class="text-center mt-10 no-print">
                 <button onclick="window.print()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                     🖨️ Cetak / Simpan sebagai PDF
-                </button>
+                </Tanda tangan guru
+</button>
             </div>
 
         </section>
