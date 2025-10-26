@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Software & LKPD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style tambahan untuk cetak (print) */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none; /* Sembunyikan elemen yang tidak perlu dicetak */
+            }
+            .page-break {
+                page-break-before: always; /* Paksa halaman baru untuk LKPD */
+            }
+            .lkpd-input, .lkpd-textarea, .lkpd-radio {
+                border: 1px solid #000 !important;
+                background-color: #f0f0f0 !important;
+            }
+            img {
+                max-width: 250px !important; /* Kecilkan gambar saat dicetak */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg">
+            
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-800 mb-6">
+                💿 Mengenal Software: Jiwa yang Menghidupkan Komputer
+            </h1>
+
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Jika di artikel sebelumnya kita membahas **Hardware** sebagai tubuh fisik komputer, sekarang kita akan membahas **Software**. *Software* adalah "jiwa" atau "pikiran" yang memberi tahu *hardware* apa yang harus dilakukan.
+            </p>
+
+            <hr class="my-6">
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-purple-700 mb-3">Apa Itu Software (Perangkat Lunak)?</h2>
+                <p class="mb-4">
+                    <strong>Pengertian:</strong> <em>Software</em> (Perangkat Lunak) adalah kumpulan data elektronik, instruksi, atau program yang disimpan dan dijalankan oleh komputer untuk melakukan tugas tertentu. *Software* tidak memiliki bentuk fisik dan tidak bisa disentuh.
+                </p>
+                <p class="leading-relaxed">
+                    <strong>Analogi Restoran:</strong> Jika *Hardware* adalah dapur, kompor, dan koki, maka *Software* adalah **buku resep** dan **manajer restoran**. Resep memberi tahu koki (CPU) cara mengolah bahan (data). Manajer (Sistem Operasi) mengatur siapa melakukan apa dan kapan.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">1. Perangkat Lunak Sistem (System Software)</h2>
+                <p class="text-md text-gray-600 mb-6">Ini adalah "Manajer Restoran". Tugasnya adalah mengelola semua sumber daya *hardware* dan *software* di komputer. Tanpa *software* sistem, komputer tidak bisa menyala.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-indigo-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/6366f1/ffffff?text=Windows+dan+Android" alt="Sistem Operasi" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">A. Sistem Operasi (Operating System / OS)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> *Software* paling penting yang bertindak sebagai "jembatan" antara kamu, aplikasi, dan *hardware*. </p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Mengelola memori (RAM), mengatur file (di SSD/HDD), menangani input (dari Keyboard), dan menampilkan output (ke Monitor). Dialah "bos" dari semua *software*.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Microsoft Windows, Android, iOS (iPhone), MacOS (Apple), Linux.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-indigo-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/6366f1/ffffff?text=Antivirus" alt="Utility" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">B. Perangkat Lunak Utilitas (Utility)</h3>
+                        <p class="mt-2"><strong>Pengertian:</strong> *Software* yang bertugas sebagai "tim kebersihan dan keamanan" komputer.</p>
+                        <p class="mt-2"><strong>Fungsi:</strong> Membantu merawat komputer. Tugasnya spesifik seperti melindungi dari virus, membersihkan file sampah, atau mengatur data di *hard drive*.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Antivirus (Avast, Norton), File Manager (Windows Explorer), Disk Defragmenter.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-orange-700 mb-4 border-b pb-2">2. Perangkat Lunak Aplikasi (Application Software)</h2>
+                <p class="text-md text-gray-600 mb-6">Ini adalah "Buku Resep" untuk tugas-tugas spesifik. Ini adalah program atau "Aplikasi" (Apps) yang kamu gunakan sehari-hari untuk menyelesaikan pekerjaan, belajar, atau hiburan.</p>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-orange-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f97316/ffffff?text=MS+Word+/+Docs" alt="Pengolah Kata" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">A. Pengolah Kata (Word Processor)</h3>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk membuat dan mengedit dokumen teks, seperti mengetik surat, laporan, atau cerpen.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Microsoft Word, Google Docs, WPS Writer.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-orange-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f97316/ffffff?text=Chrome+/+Firefox" alt="Web Browser" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">B. Peramban Web (Web Browser)</h3>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk menjelajahi dan menampilkan halaman web di internet. Kamu menggunakan ini untuk membuka Google, YouTube, atau Facebook.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.</p>
+                    </div>
+                </div>
+
+                <div class="md:flex gap-6 mb-6 p-4 bg-orange-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f97316/ffffff?text=PowerPoint+/+Canva" alt="Presentasi" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">C. Pengolah Presentasi (Presentation)</h3>
+                        <p class="mt-2"><strong>Fungsi:</strong> Untuk membuat *slide-slide* yang ditampilkan saat presentasi di depan kelas.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Microsoft PowerPoint, Google Slides, Canva.</p>
+                    </div>
+                </div>
+                
+                <div class="md:flex gap-6 mb-6 p-4 bg-orange-50 rounded-lg">
+                    <img src="https://placehold.co/300x200/f97316/ffffff?text=Game+Komputer" alt="Game" class="w-full md:w-1/3 rounded-lg shadow-md mb-4 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">D. Game (Permainan)</h3>
+                        <p class="mt-2"><strong>Fungsi:</strong> *Software* yang dibuat khusus untuk hiburan.</p>
+                        <p class="mt-2"><strong>Contoh:</strong> Minecraft, Mobile Legends, Roblox, dan game-game lain di HP atau komputermu.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <section class="bg-white p-6 md:p-10 rounded-xl shadow-lg mt-10 page-break">
+            
+            <h1 class="text-3xl font-bold text-center text-purple-800 mb-8">
+                📝 LEMBAR KERJA PESERTA DIDIK (LKPD)
+            </h1>
+            <h2 class="text-xl font-semibold text-center text-gray-700 mb-8 -mt-6">Mengenal Software Komputer</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-10 border-b pb-8">
+                <div>
+                    <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="nama" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                </div>
+                <div>
+                    <label for="kelas" class="block text-sm font-medium text-gray-700">Kelas</label>
+                    <input type="text" id="kelas" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                </div>
+            </form>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 1: Kategori Software</h3>
+                <p class="text-gray-600 mb-4">Kelompokkan *software* di bawah ini dengan memberi tanda centang (✓) pada kolom yang tepat!</p>
+                
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 p-3 text-left">Nama Software</th>
+                            <th class="border border-gray-300 p-3 w-40">Perangkat Lunak SISTEM</th>
+                            <th class="border border-gray-300 p-3 w-40">Perangkat Lunak APLIKASI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-3 font-medium">Microsoft Windows</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3 font-medium">Google Chrome</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3 font-medium">Antivirus</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3 font-medium">Microsoft Word</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-3 font-medium">Android</td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                            <td class="border border-gray-300 p-3 text-center"><input type="checkbox" class="lkpd-radio h-5 w-5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 2: Menjodohkan</h3>
+                <p class="text-gray-600 mb-4">Tuliskan **Huruf** dari Kolom B di samping nomor Kolom A yang sesuai.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM A (Software Aplikasi)</div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>1. Google Chrome</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>2. Microsoft Word</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>3. Minecraft</label>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input type="text" class="lkpd-input w-10 h-10 text-center font-bold border-gray-300 rounded">
+                            <label>4. PowerPoint</label>
+                        </div>
+                    </div>
+                    <div class="space-y-2 bg-gray-50 p-4 rounded-lg border">
+                        <div class="font-semibold text-lg border-b pb-2">KOLOM B (Fungsi Utama)</div>
+                        <p><strong>A.</strong> Untuk membuat slide presentasi.</p>
+                        <p><strong>B.</strong> Untuk menjelajahi internet.</p>
+                        <p><strong>C.</strong> Untuk hiburan atau bermain.</p>
+                        <p><strong>D.</strong> Untuk mengetik dokumen teks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Bagian 3: Analisis Sederhana</h3>
+                <p class="text-gray-600 mb-6">Jawablah pertanyaan di bawah ini dengan singkat dan jelas!</p>
+                
+                <div class="p-4 border rounded-lg bg-gray-50">
+                    <p class="font-semibold mb-3">
+                        Kamu baru saja selesai mengetik tugas cerpen menggunakan **Microsoft Word**. Agar file-nya tidak hilang, kamu menekan tombol **"Save"**.
+                    </p>
+                    <p class="mb-4">
+                        Jelaskan, *software* apa yang bekerja dan *hardware* apa yang terlibat saat kamu menekan "Save"?
+                    </p>
+                    
+                    <label for="software_save" class="block text-sm font-medium text-gray-700">1. Software yang kamu gunakan:</label>
+                    <input type="text" id="software_save" value="Microsoft Word (Software Aplikasi)" class="lkpd-input mt-1 block w-full md:w-1/2 rounded-md border-gray-300 shadow-sm" readonly>
+                    
+                    <label for="hardware_save" class="block text-sm font-medium text-gray-700 mt-4">2. Hardware yang terlibat untuk menyimpan file secara permanen:</label>
+                    <input type="text" id="hardware_save" placeholder="Ketik jawabanmu di sini (contoh: RAM, CPU, SSD, dll)" class="lkpd-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
+                </div>
+            </div>
+
+            <div class="text-center mt-10 no-print">
+                <button onclick="window.print()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    🖨️ Cetak / Simpan sebagai PDF
+                </button>
+            </div>
+
+        </section>
+
+    </div> </body>
+</html>
